@@ -14,15 +14,15 @@ require(
         paper.setAttributeNS(null, "width", .9*paperDiv.clientWidth);
         paper.setAttributeNS(null, "height", .9*paperDiv.clientHeight);
         // put the width and heigth of the canvas into variables for our own convenience
-        var pWidth = parseInt(paper.offsetWidth);
-        var pHeight = parseInt(paper.offsetHeight);
+        var pWidth = paperDiv.clientWidth; // parseInt(paper.offsetWidth);
+        var pHeight = paperDiv.clientHeight;//parseInt(paper.offsetHeight);
         console.log("pWidth is " + pWidth + ", and pHeight is " + pHeight);
 
         window.onresize = function(event) { 
           paper.setAttributeNS(null, "width", .9*paperDiv.clientWidth);
           paper.setAttributeNS(null, "height", .9*paperDiv.clientHeight);
-          pWidth = parseInt(paper.offsetWidth);
-          pHeight = parseInt(paper.offsetHeight);
+          pWidth = paperDiv.clientWidth;
+          pHeight = paperDiv.clientHeight;
         };
 
         var makeCircle = function(cx, cy, r, color){
@@ -62,7 +62,7 @@ require(
                 dot[i].ypos=randInt(0,pHeight);
                 dot[i].xrate=randFloat(-1,1);
                 dot[i].yrate=randFloat(-1,1);
-
+                alert('test');
                 paper.appendChild(dot[i]);
             }
         }
