@@ -62,7 +62,6 @@ require(
                 dot[i].ypos=randInt(0,pHeight);
                 dot[i].xrate=randFloat(-1,1);
                 dot[i].yrate=randFloat(-1,1);
-                alert('test');
                 paper.appendChild(dot[i]);
             }
         }
